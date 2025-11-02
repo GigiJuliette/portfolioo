@@ -1,0 +1,42 @@
+#contact-form {
+  justify-self: center;
+  align-self: center;
+  width: min(70%, 1300px);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 1rem;
+  font-family: var(--main-font);
+  grid-template-areas:
+    "a b"
+    "c d"
+    "e e"
+    "x f";
+  .phrase {
+    grid-area: c;
+    place-self: center;
+  }
+  .name {
+    grid-area: b;
+  }
+  .email {
+    grid-area: d;
+  }
+  .textarea {
+    grid-area: e;
+    height: 15rem;
+  }
+  .submitbtn {
+    grid-area: f;
+    place-self: end;
+    width: fit-content;
+    height: fit-content;
+    font-size: 22px;
+  }
+  input,
+  textarea,
+  button {
+    background-color: var(--bg-color);
+    font-family: var(--main-font);
+  }
+}

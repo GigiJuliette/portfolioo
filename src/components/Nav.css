@@ -1,0 +1,13 @@
+nav {
+  font-family: var(--title-font);
+  font-size: 54px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  a {
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--main-color);
+  }
+}
