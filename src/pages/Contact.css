@@ -1,7 +1,9 @@
 #contact-form {
   justify-self: center;
   align-self: center;
-  width: min(70%, 1300px);
+  width: clamp(800px, 70%, 1000px);
+
+  flex: 0 1 auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto auto auto auto;
@@ -38,5 +40,6 @@
   button {
     background-color: var(--bg-color);
     font-family: var(--main-font);
+    transition: 0.1s ease-in;
   }
 }

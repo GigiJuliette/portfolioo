@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
 // page components
 
@@ -21,10 +22,10 @@ const router = createBrowserRouter([
       //   path: "/about",
       //   element: <About />,
       // },
-      // {
-      //   path: "/projects",
-      //   element: <Projects />,
-      // },
+      {
+        path: "/projects",
+        element: <Projects />,
+      },
       {
         path: "/contact",
         element: <Contact />,
