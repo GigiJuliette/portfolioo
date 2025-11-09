@@ -5,7 +5,7 @@ export default function Email({ name, email, message }) {
   return (
     <Html>
       <div style={{ fontFamily: "Arial, sans-serif", padding: "20px" }}>
-        <h2>📬 Nouveau message depuis ton portfolio</h2>
+        <h2>💋 Nouveau message depuis ton portfolio ma queen 💋</h2>
         <p>
           <strong>Nom :</strong> {name}
         </p>
