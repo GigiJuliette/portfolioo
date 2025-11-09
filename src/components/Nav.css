@@ -11,6 +11,17 @@ nav {
     color: var(--main-color);
   }
 }
+.hover {
+  transition: 0.3s linear;
+}
+.hover:hover {
+  transform: translate(3px, 3px);
+}
+@keyframes hoverAnim {
+  to {
+    transform: translate(3px, 3px);
+  }
+}
 @media (max-width: 800px) {
   nav {
     font-size: 40px;
@@ -22,5 +33,45 @@ nav {
     align-items: center;
     gap: 1rem;
     margin-top: 0;
+  }
+}
+.activeNav {
+  position: relative;
+  animation: hoverAnim 0.2s linear reverse;
+}
+.activeNav::before {
+  left: -30px;
+  top: 12px;
+  position: absolute;
+  display: block;
+  content: "💜";
+  font-size: 20px;
+  animation: x 1s infinite alternate linear;
+}
+
+@media (max-width: 800px) {
+  .activeNav::before {
+    top: 5px;
+  }
+}
+@media (max-width: 550px) {
+  .activeNav::before {
+    top: 7px;
+    font-size: 12px;
+  }
+}
+
+@keyframes x {
+  from {
+    opacity: 1;
+  }
+  59.9% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
   }
 }

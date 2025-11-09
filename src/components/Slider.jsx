@@ -1,7 +1,7 @@
 import "./Slider.css";
-import cemSc from "../assets/Cemcs.png";
+import cemSc from "../assets/CEMcs.png";
 import neonSC from "../assets/NEON808sc.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import arrowRight from "../assets/arrowRight.svg";
 import arrowLeft from "../assets/arrowLeft.svg";
 const projects = [
@@ -27,7 +27,6 @@ const projects = [
 
 function Slider() {
   const [index, setIndex] = useState(0);
-
   const toNext = () => {
     setIndex((index + 1) % projects.length);
   };
@@ -50,8 +49,16 @@ function Slider() {
         <a className="retroUi secondBtn" href={current.repoUrl} target="_blank">
           See repo
         </a>
-        <img onClick={toPrev} src={arrowLeft} className="arrows arrow-left" />
-        <img onClick={toNext} src={arrowRight} className="arrows arrow-right" />
+        <img
+          onClick={toPrev}
+          src={arrowLeft}
+          className="arrows arrow-left hover"
+        />
+        <img
+          onClick={toNext}
+          src={arrowRight}
+          className="arrows arrow-right hover"
+        />
       </div>
     </>
   );
