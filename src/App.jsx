@@ -1,7 +1,6 @@
 import { Outlet } from "react-router";
 import "./App.css";
 import Nav from "./components/Nav";
-import Jiji from "./components/jiji/Jiji";
 
 function App() {
   return (
@@ -10,7 +9,6 @@ function App() {
       <main>
         <Outlet />
       </main>
-      {/* <Jiji /> */}
     </>
   );
 }
