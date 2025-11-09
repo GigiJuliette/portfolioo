@@ -1,7 +1,36 @@
 import "./Contact.css";
+import { useState } from "react";
+
 function Contact() {
+  const [status, setStatus] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (!res.ok) throw new Error(await res.text());
+      setStatus("✅ Message sent successfully!");
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      setStatus("❌ Error sending message");
+    }
+  }
+
   return (
-    <form id="contact-form">
+    <form id="contact-form" onSubmit={handleSubmit}>
       <span className="phrase">
         Feel free to reach out by email or directly through this form.
       </span>
@@ -28,16 +57,14 @@ function Contact() {
         placeholder="What's up?"
         required
       ></textarea>
-      <div
-        className="g-recaptcha"
-        data-sitekey="6LcFr88rAAAAAKaROmIuXpecwwGKo8edoclP0Wyw"
-      ></div>
 
       <button className="submitbtn retroUi" type="submit">
         Send
       </button>
-      <p id="status"></p>
+
+      <p id="status">{status}</p>
     </form>
   );
 }
+
 export default Contact;

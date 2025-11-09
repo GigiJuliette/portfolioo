@@ -1,7 +1,7 @@
 import "./Slider.css";
-import cemSc from "../assets/Cemcs.png";
+import cemSc from "../assets/CEMcs.png";
 import neonSC from "../assets/NEON808sc.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import arrowRight from "../assets/arrowRight.svg";
 import arrowLeft from "../assets/arrowLeft.svg";
 const projects = [
