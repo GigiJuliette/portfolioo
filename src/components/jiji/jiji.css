@@ -1,0 +1,32 @@
+.jiji-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  height: auto;
+  background-color: #fafafa;
+  animation: fadeIn 1s ease-out;
+}
+
+.jiji-container svg {
+  max-width: 320px;
+  height: auto;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.jiji-container svg:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

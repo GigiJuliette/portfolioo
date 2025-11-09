@@ -5,10 +5,7 @@ import App from "./App";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-
-// page components
-
-// router creation
+import About from "./pages/About";
 
 const router = createBrowserRouter([
   {
@@ -18,10 +15,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      // {
-      //   path: "/about",
-      //   element: <About />,
-      // },
+      {
+        path: "/about",
+        element: <About />,
+      },
       {
         path: "/projects",
         element: <Projects />,
@@ -33,8 +30,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
-// rendering
 
 const rootElement = document.getElementById("root");
 
