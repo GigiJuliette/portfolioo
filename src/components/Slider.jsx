@@ -59,6 +59,7 @@ function Slider() {
           src={arrowRight}
           className="arrows arrow-right hover"
         />
+        <div className="line"></div>
       </div>
     </>
   );

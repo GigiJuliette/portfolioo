@@ -13,7 +13,6 @@
 .retroUi {
   border: 2px solid var(--main-color);
   box-shadow: 4px 4px 0 0 var(--main-color);
-  padding: 1rem;
 
   &:focus {
     outline: none;

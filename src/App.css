@@ -1,9 +1,14 @@
 main {
   display: flex;
+  height: 90vh;
   flex-direction: column;
-  min-height: 80vh;
   justify-content: center;
+  align-items: center;
 }
 body {
   background-color: var(--bg-color);
+}
+
+* {
+  transition: 0.3s linear;
 }
