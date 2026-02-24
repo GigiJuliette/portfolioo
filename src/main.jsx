@@ -2,7 +2,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import "./index.css";
 import App from "./App";
-import Fevrier from "./pages/fevrier/fevrier";
+import Fevrier from "./pages/Fevrier";
+
 // import Contact from "./pages/Contact";
 // import Home from "./pages/Home";
 // import Projects from "./pages/Projects";
