@@ -5,10 +5,10 @@ import Nav from "./components/Nav";
 function App() {
   return (
     <>
-      <Nav />
-      <main>
-        <Outlet />
-      </main>
+      {/* <Nav /> */}
+      {/* <main> */}
+      <Outlet />
+      {/* </main> */}
     </>
   );
 }
